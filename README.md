@@ -2,7 +2,7 @@
 Active Directory Management Interface (ADMI) for user and endpoint device management on an Active directory (AD) system.
 
 # Introduction
-The Active Directory Management Interface (ADMI) program is a tool with the aim of making Microsoft Active Directory (AD) and PowerShell easier to use for beginers. Full Disclaimer! - This is my high school senior capstone projet and may not be structured the best. 
+The Active Directory Management Interface (ADMI) program is a tool with the aim of making Microsoft Active Directory (AD) and PowerShell easier to use for beginers. Full disclosure! - This is my high school senior capstone projet and may not be structured the best. 
 
 The system would create a Graphical user interface (GUI) based platform on which the user can manage a wide array of devices and issue commands to them. In addition, the Active Directory Management Interface (A.D.M.I.) would assist the admin's ability to administrate their users and perform actions quickly. 
 

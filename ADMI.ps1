@@ -11,9 +11,11 @@
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
+
+
 #-------------------variables-------------------#
 #user icons
-$User0Icon = ".\logo\logo0.gif"
+$User0Icon = ".\res\logo\logo0.gif"
 
 #security credentials 
 $SecurityCred0 = "Apple-Horse-Mighty-Dingleberry"
@@ -31,6 +33,7 @@ function ADMI_InvokeCommand {
     $CommandOuputText > $ADMIoutput
     return $CommandOuputText
 }
+
 function ADMI_UserWindowStaging {
     #instantiate a new form object
     $MainForm = New-Object system.Windows.Forms.Form
@@ -117,6 +120,9 @@ function ADMI_CloseWindow {
 }
 
 function ADMI_AppWindow {
+    
+    $ValidCommands = ("Get-PSDrive", "Get-Command")
+
     #instantiate a new form object
     $MainForm = New-Object system.Windows.Forms.Form
     $MainForm.Width = 1280
@@ -205,7 +211,9 @@ function ADMI_AppWindow {
     $CheckCommandBox = $MainForm.ShowDialog()
     $UserCommand = $CommandTextBox.Text
     if ($CheckCommandBox -eq [Windows.Forms.DialogResult]::OK){
-        ADMI_InvokeCommand #UN-COMMENT THIS LINE TO RUN COMMANDS VIA THE GUI   ~ JACOB
+        if ($ValidCommands.Contains($UserCommand)){
+            ADMI_InvokeCommand #UN-COMMENT THIS LINE TO RUN COMMANDS VIA THE GUI   ~ JACOB
+        }
         ADMI_AppWindow
         #$CommandOutput.Text = $CommandOutput.AppendText($ADMIoutput)
 

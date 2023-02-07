@@ -32,7 +32,8 @@ By utilizing techniques such as the use of PowerShell, as well as knowledge of c
 
 # TO:DO
 1. Finish the GUI
-2. Implement logging 
-3. Implement password updating 
-4. Upload to (my class') domain controller 
-5. Fine tuning && testing to make sure everything works!
+2. Add input validation 
+3. Implement logging 
+4. Implement password updating 
+5. Upload to (my class') domain controller 
+6. Fine tuning && testing to make sure everything works!

@@ -12,7 +12,7 @@ A.D.M.I. will increase its system's response time and ease of use.
 To create the A.D.M.I. program The following goals will be achieved within the specified timeframe; meeting the predefined milestones: 
 **Goals**: 
 
-_Goal one:_ Create a CLI using a PowerShell system that can run without issues on a host computer.
+_Goal one:_ Create a GUI using a PowerShell system that can run without issues on a host computer.
 
     Timeline: First 4 weeks of the project.
     

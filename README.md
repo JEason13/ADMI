@@ -14,14 +14,14 @@ To create the A.D.M.I. program The following goals will be achieved within the s
 
 _Goal one:_ Create a GUI using a PowerShell system that can run without issues on a host computer.
 
-Timeline: First 4 weeks of the project.
+    Timeline: First 4 weeks of the project.
     
 _Goal two:_ Configure the batch system to interface with Microsoft AD. 
 
-Timeline: Next 4 weeks of the project.
+    Timeline: Next 4 weeks of the project.
     
 _Goal three:_ Testing and fine-tuning the program. 
 
-Timeline: The final 4 weeks of the project.
+    Timeline: The final 4 weeks of the project.
     
 

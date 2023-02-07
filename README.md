@@ -22,7 +22,7 @@ _Goal two:_ Configure the batch system to interface with Microsoft AD.
     
 _Goal three:_ Testing and fine-tuning the program. 
 
-    Timeline: The final 4 weeks of the project.
+    Timeline: Final 4 weeks of the project.
  
 
 # Intended Learning Purpose

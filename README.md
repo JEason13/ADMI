@@ -8,9 +8,6 @@ The system would create a Graphical user interface (GUI) based platform on which
 
 A.D.M.I. will increase its system's response time and ease of use.
 
-![Screenshot_20230208_114224](https://user-images.githubusercontent.com/31490880/217596638-00bc2246-47d3-49e8-8372-07bc74aa4957.png)
-
-
 # Goals and Timelines 
 To create the A.D.M.I. program The following goals will be achieved within the specified timeframe; meeting the predefined milestones: 
 

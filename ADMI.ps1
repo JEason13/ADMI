@@ -121,7 +121,7 @@ function ADMI_CloseWindow {
 
 function ADMI_AppWindow {
     
-    $ValidCommands = ("Get-PSDrive", "Get-Command")
+    $ValidCommands = ("Get-PSDrive", "get-psdrive", "Get-psdrive", "Get-PSdrive", "Get-Command", "get-command", "Get-command", "Get-Language", "get-language", "Get-language")
 
     #instantiate a new form object
     $MainForm = New-Object system.Windows.Forms.Form
@@ -189,23 +189,47 @@ function ADMI_AppWindow {
     $okButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
     $MainForm.AcceptButton = $okButton
     $MainForm.Controls.Add($okButton)    
+
+    #more buttons! yay!
+
+    $aduserlabel = New-Object System.Windows.Forms.Label
+    $aduserlabel.ForeColor = 'yellow'
+    $aduserlabel.Location = New-Object System.Drawing.Point(897,135)
+    $aduserlabel.Size = New-Object System.Drawing.Size(325,20)
+    $aduserlabel.Text = 'Get-ADUser ---> Specify an AD user in the text box below:'
+    $MainForm.Controls.Add($aduserlabel)
     
-    $CommandOuputText = ""
+    $adusertextbox = New-Object System.Windows.Forms.TextBox
+    $adusertextbox.Location = New-Object System.Drawing.Point(900,155)
+    $adusertextbox.Size = New-Object System.Drawing.Size(300,20)
+    $MainForm.Controls.Add($adusertextbox)    
+    $MainForm.Add_Shown({$adusertextbox.Select()})
+
+    $aduserbutton = New-Object System.Windows.Forms.Button
+    $aduserbutton.Location = New-Object System.Drawing.Point(900,180)
+    $aduserbutton.Size = New-Object System.Drawing.Size(125,25)
+    $aduserbutton.ForeColor = 'yellow'
+    $aduserbutton.Text = 'Run Command'
+    $aduserbutton.DialogResult = [System.Windows.Forms.DialogResult]::Yes
+    $MainForm.AcceptButton = $aduserbutton
+    $MainForm.Controls.Add($aduserbutton)    
+    
+    #$CommandOuputText = ""
     #$CheckCommandBox = $MainForm.ShowDialog()
 
-    $CommandOutputLabel = New-Object System.Windows.Forms.Label
-    $CommandOutputLabel.ForeColor = 'yellow'
-    $CommandOutputLabel.Location = New-Object System.Drawing.Point(897,120)
-    $CommandOutputLabel.Size = New-Object System.Drawing.Size(325,20)
-    $CommandOutputLabel.Text = 'Command Output:'
+    #$CommandOutputLabel = New-Object System.Windows.Forms.Label
+    #$CommandOutputLabel.ForeColor = 'yellow'
+    #$CommandOutputLabel.Location = New-Object System.Drawing.Point(897,120)
+    #$CommandOutputLabel.Size = New-Object System.Drawing.Size(325,20)
+    #$CommandOutputLabel.Text = 'Command Output:'
     #$MainForm.Controls.Add($CommandOutputLabel)
     
-    $CommandOutput = New-Object System.Windows.Forms.TextBox
-    $CommandOutput.Location = New-Object System.Drawing.Point(900,150)
-    $CommandOutput.Size = New-Object System.Drawing.Size(325,200)
+    #$CommandOutput = New-Object System.Windows.Forms.TextBox
+    #$CommandOutput.Location = New-Object System.Drawing.Point(900,150)
+    #$CommandOutput.Size = New-Object System.Drawing.Size(325,200)
     #$MainForm.Controls.Add($CommandOutput)    
 
-    $CommandOutput.ReadOnly = $true
+    #$CommandOutput.ReadOnly = $true
     #$CommandOutput.Text = $CommandOutput.AppendText($ADMIoutput)
 
     $CheckCommandBox = $MainForm.ShowDialog()
@@ -218,6 +242,15 @@ function ADMI_AppWindow {
         #$CommandOutput.Text = $CommandOutput.AppendText($ADMIoutput)
 
     }
+
+    $GetADUserFromGUI = $adusertextbox.Text
+    
+    if ($CheckCommandBox -eq [System.Windows.Forms.DialogResult]::Yes){
+        #needs to be tested on an Active Directory system 
+        Get-ADUser + " " + $GetADUserFromGUI 
+        ADMI_AppWindow
+    }
+
     While (ADMI_CloseWindow -eq $true) {
         [void]$MainForm.ShowDialog()
     }

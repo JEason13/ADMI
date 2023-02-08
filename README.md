@@ -8,7 +8,8 @@ The system would create a Graphical user interface (GUI) based platform on which
 
 A.D.M.I. will increase its system's response time and ease of use.
 
-<img src="https://user-images.githubusercontent.com/31490880/217594845-7a46ce3c-bdf9-4229-a414-2a90e4fdeacc.pn" width="48" width = 500, height = 350>
+<img src=" width="48" width = 500, height = 350>
+![image](https://user-images.githubusercontent.com/31490880/217594845-7a46ce3c-bdf9-4229-a414-2a90e4fdeacc.pn = 400x350)
 
 # Goals and Timelines 
 To create the A.D.M.I. program The following goals will be achieved within the specified timeframe; meeting the predefined milestones: 

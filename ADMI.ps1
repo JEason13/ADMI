@@ -248,7 +248,7 @@ function ADMI_AppWindow {
     if ($CheckCommandBox -eq [System.Windows.Forms.DialogResult]::Yes){
         #needs to be tested on an Active Directory system 
         #[string]$GetTheADUser = $GetADUserFromGUI.ToString()
-        Get-ADUser -Filter 'sAMAccountName -eq $GetADUserFromGUI' #https://stackoverflow.com/questions/20075502/get-aduser-filter-will-not-accept-a-variable
+        Get-ADUser -Filter 'sAMAccountName -eq $GetADUserFromGUI'
         ADMI_AppWindow
     }
 

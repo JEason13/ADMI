@@ -6,7 +6,7 @@
 # File:         Main.ps1
 
 #-------------------------------------------Program Start-------------------------------------------#
-
+``
 #add WinForms & sys.drawing to session 
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
@@ -126,7 +126,7 @@ function ADMI_AppWindow {
     #instantiate a new form object
     $MainForm = New-Object system.Windows.Forms.Form
     $MainForm.Width = 1280
-    $MainForm.Height = 740
+    $MainForm.Height = 500
     $MainForm.text = "User:`t" + $CurrentUser
     
     #create new logo (PictureBox object)
